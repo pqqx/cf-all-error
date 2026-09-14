@@ -81,7 +81,7 @@
                 <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">
                     Your IP:
                     <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
-                    <span class="hidden" id="cf-footer-ip">1.1.1.1</span>
+                    <span class="hidden" id="cf-footer-ip"></span>
                     <span class="cf-footer-separator sm:hidden">&bull;</span>
                 </span>
                 
@@ -90,6 +90,6 @@
         </div><!-- /.error-footer -->
     </div>
 </div>
-<script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
+<script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal"),e=a.getElementById("cf-footer-ip");fetch("https://api64.ipify.org").then(r=>r.text()).then(ip=>e.textContent=ip);b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");e.classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
 </body>
 </html>
